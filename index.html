@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(75,75,125,1) 35%, rgba(0,212,255,1) 100%);">
+    <div class="parent "> <h1 class="mt-[30px] text-7xl ml-[40%] font-emerald-400 text-emerald-400">QUIZ APP</h1>
+        <div class="formwarpper  mx-auto mt-[6%] rounded-[10px] border-emerald-400 w-[50%] h-[400px]">
+            <div class="form">
+                <input id="name" class="w-[80%]  p-3 ml-[10%]  rounded-[10px] border-emerald-400 h-[60px] mt-3 hover:bg-gray-300 hover:text-[white]" type="text"
+                    placeholder="Enter Name">
+                <input id="email" class="w-[80%] p-3  ml-[10%] rounded-[10px] border-emerald-400 h-[60px] mt-3 hover:bg-gray-300 hover:text-[white]" type="text"
+                    placeholder="Enter Email">
+                <input id="rollno" class="w-[80%]  p-3 ml-[10%] rounded-[10px]  border-emerald-400 h-[60px] mt-3 hover:bg-gray-300 hover:text-[white]" type="text"
+                    placeholder="Enter Roll No">
+                <input id="institute" class="w-[80%] p-3  ml-[10%] rounded-[10px] border-emerald-400 h-[60px] mt-3 hover:bg-gray-300 hover:text-[white]" type="text"
+                    placeholder="Enter Institute">
+                <div class=" w-[80px] mx-auto mt-[20px]">
+                     <button onclick="startQuiz()"
+                        class="border-2 border-emerald-400 h-[40px] w-[100%] rounded-[12px] text-emerald-400 hover:bg-gray-300 hover:text-[white]">Start Quiz</button>
+                </div>
+            </div>
+            <div class=" main-div  hidden">
+                <div class="quiz-body">
+                    <div class="info-div h-[80px] border-emerald-400">
+                        <div class="flex justify-between mt-2">
+                            <h1 class="set-name font-bold text-emerald-400">Suhaib</h1>
+                            <h1 class="set-email font-bold text-emerald-400">Syedsuhaibhussani@gmail.com</h1>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <h1 class="set-rollno font-bold text-emerald-400" >rollNo</h1>
+                            <h1 class="set-institute font-bold text-emerald-400">Institute</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-div p-5 mt-2">
+                    <h3 id="ques" class="font-bold text-emerald-400 text-xl">
+                        Source code is always written in
+                    </h3>
+                    <ul class="text-emerald-400" id="quesOptions">
+                        <li>low level language</li>
+                        <li>Assembly language</li>
+                        <li>High level language</li>
+                        <li>scripted language</li>
+                    </ul>
+                </div>
+                <div class="footer ">
+                    <button onclick="nextQues()" class="border-2 border-emerald-400 h-[40px] w-[100%] rounded-[12px]  hover:bg-gray-300 hover:text-[white]">Next</button>
+                </div>
+            </div>
+            <div class="result hidden pt-4 mt-4">
+               <h1 class="text-emerald-400">Total Question: <span id="tQue"></span></h1>
+               <h1 class="text-emerald-400">Correct answer: <span id="cAns"></span></h1>
+               <h1 class="text-emerald-400">Wrong answer: <span id="wAns"></span></h1>
+               <h1 class="text-emerald-400">Result:<span id="res"></span></h1>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="quiz.js"></script>
+
+</html>
